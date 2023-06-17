@@ -26,5 +26,14 @@ void loop() {
   // Send data to ESP via serial communication
   String sendToESP = String(humidity) + ";" + String(temperature) + ";" + String(nilai);
   ss.println(sendToESP);
+
+  // Display data in the log
+  Serial.print("Humidity: ");
+  Serial.print(humidity);
+  Serial.print("%, Temperature: ");
+  Serial.print(temperature);
+  Serial.print("°C, Nilai: ");
+  Serial.println(nilai);
+
   delay(10000);
 }
